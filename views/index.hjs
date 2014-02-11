@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{ title }}</title>
+    <title>{{ title }}:{{ subtitle }}</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1>{{ title }}</h1>
-    <p>Welcome to {{ title }}</p>
+  	<div id="wrapper">
+	    <div id="title">
+		    <h1>{{ title }}</h1>
+		    <h2>------ {{ subtitle }} ------</h2>
+		</div>
+		<button id="play">ROLL THE DICE!</button>
+		<button id="replay" class="gone">RESET GAME</button>
+		<div class="dice-container">
+			<canvas class="dice" id="dice1" width="60" height="60" style="border:1px solid #000000;"></canvas>
+			<canvas class="dice" id="dice2" width="60" height="60" style="border:1px solid #000000;"></canvas>
+			<canvas class="dice" id="dice3" width="60" height="60" style="border:1px solid #000000;"></canvas>
+		</div>
+		<div class="dice-container">
+			<canvas class="dice" id="dice4" width="60" height="60" style="border:1px solid #000000;"></canvas>
+			<canvas class="dice" id="dice5" width="60" height="60" style="border:1px solid #000000;"></canvas>
+			<canvas class="dice" id="dice6" width="60" height="60" style="border:1px solid #000000;"></canvas>
+		</div>
+		<div class="score-container">
+			<div class="score">
+				<h2>Player A:&nbsp;<span id="score-a">0</span>&nbsp;
+				Player B:&nbsp;<span id="score-b">0</span></h2>
+				<div id="result">
+					<div id="result-inset"></div>
+					<h1><span id="winner-winner"></span></h1>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="javascripts/script.js"></script>
   </body>
 </html>

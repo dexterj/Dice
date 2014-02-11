@@ -1,8 +1,77 @@
 body {
   padding: 50px;
-  font: 14px "Gill Sans", Helvetica, Verdana, Arial, sans-serif;
+  font: 14px 'Roboto', sans-serif;
+  background:url('/images/purty_wood.png')repeat;
+  color: #fff;
+}
+
+h1{
+	font: bold 50px 'Roboto Slab', serif;
+	margin:0;
+	text-shadow: -1px -1px 1px rgba(0, 0, 0, .65); 
+}
+h2{
+	margin: -15px 0 20px 0;
+	text-shadow: -1px -1px 1px rgba(0, 0, 0, .65); 
 }
 
 a {
   color: #00B7FF;
+}
+#wrapper {
+	height:auto;
+	width: 336px;
+	padding: 0 0 75px 0;
+	margin: 20px auto;
+	text-align: center;
+	box-shadow: 2px 2px 2px #000;
+	background:url('/images/green_cup.png');
+}
+.dice-container{
+	clear:both;
+}
+.dice{
+	height: 60px;
+	width: 60px;
+	margin: 25px;
+	border: solid 1px #333;
+	float: left;
+	border-radius: 4px;
+	font-size: 3em;
+	background:url('/images/rockywall.png');
+	box-shadow: 5px 5px 3px #000;
+}
+.score{
+	height: 60px;
+	margin: 20px;
+}
+.gone{
+	display: none;
+}
+button {
+	color: #778669;
+	border-image: none;
+	border: none;
+	box-shadow: inset 1px 1px 2px #000;
+	padding:11px 9px 9px 11px;
+	font-size: 20px;
+	width: 88%;
+	background:url('/images/crossword.png');
+}
+button:hover {
+	box-shadow: inset 2px 2px 3px #000;
+	padding:12px 8px 8px 12px;
+}
+#result {
+	display: none;
+	z-index: -1000;
+	box-shadow: 1px 1px 1px #000;
+	background: url('/images/crossword.png')repeat;
+	color: #778669;
+	
+}
+#result-inset{
+	box-shadow: inset 1px 1px 1px #000;
+	width: 100%;
+	height: 2px;
 }
