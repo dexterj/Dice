@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
+  	<meta name="apple-mobile-web-app-capable" content="yes">	
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <meta name = "viewport" content = "width = device-width,
+       initial-scale = 1.0, user-scalable = no">
     <title>{{ title }}:{{ subtitle }}</title>
+    <link rel="stylesheet" href="/stylesheets/add2home.css">
+	<script type="application/javascript" src="/javascripts/add2home.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
@@ -9,7 +16,7 @@
   	<div id="wrapper">
 	    <div id="title">
 		    <h1>{{ title }}</h1>
-		    <h2>------ {{ subtitle }} ------</h2>
+		    <h2>--- {{ subtitle }} ---</h2>
 		</div>
 		<button id="play">ROLL THE DICE!</button>
 		<button id="replay" class="gone">RESET GAME</button>
@@ -25,7 +32,7 @@
 		</div>
 		<div class="score-container">
 			<div class="score">
-				<h2>Player A:&nbsp;<span id="score-a">0</span>&nbsp;
+				<h2>Player A:&nbsp;<span id="score-a">0</span><br />
 				Player B:&nbsp;<span id="score-b">0</span></h2>
 				<div id="result">
 					<div id="result-inset"></div>
