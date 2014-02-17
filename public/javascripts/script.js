@@ -1,4 +1,7 @@
-// - - - - - - - - - - - - - - - - - - - - - - - - - DICE DEFINITIONS 
+// written by Dexter Jacobs http://www.dexterjacobs.com 
+// functions that are on load and starting the game are located at the bottom of this doc
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - DICE DEFINITIONS 
 var die1 = function(x){
 	var die=document.getElementById(x);
 	var ctx=die.getContext("2d");
@@ -99,7 +102,7 @@ var die6 = function(x){
 	ctx.fill();
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - GAME FUNCTIONS
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - GAME FUNCTIONS
 
 var replaceById = function(x,y){
 	document.getElementById(x).innerHTML=y;
@@ -140,7 +143,7 @@ var displayScore = function(){
 	};
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - DECLARE WINNER 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - DECLARE WINNER 
 
 var alertPlayerA = function(){
 	displayScore();
@@ -183,7 +186,7 @@ var ifNeg = function(){
 		credits = 0;
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - CHECK DICE FOR WINNER
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - CHECK DICE FOR WINNER
 
 var checkForTriples = function(){
 	// Bank rolls
@@ -272,7 +275,7 @@ var checkScore = function(){
 	}else alertDraw();
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - THROW DICE
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - THROW DICE
 
 var throwDice = function(num){
 	console.log(num);
@@ -299,7 +302,7 @@ var playGame = function(){
 	throwDice(20);	
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - RESET GAME
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - RESET GAME
 
 var resetGame = function(){
 	for (var i = 1; i <= 6; i++) {
@@ -309,7 +312,7 @@ var resetGame = function(){
 	swapButton();
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - SET THE BET / DISPLAY CREDITS
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SET THE BET / DISPLAY CREDITS
 
 betting = function() {
    var el, newPoint, newPlace, offset;
@@ -338,19 +341,19 @@ var makeBet= function(){
 	console.log(theBet);
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - RULES TOGGLE
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - RULES TOGGLE
 
 var showRules = function(){
 	$("#rules").slideToggle(1000, "swing")
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - DEFINE DICE / SCORE / CREDITS
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - DEFINE DICE / SCORE / CREDITS
 
 var dice = [];
 var score = [];
 credits = 20;
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - ON LOAD / ON CLICK
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ON LOAD / ON CLICK
 
 for (var i = 1; i <= 6; i++) {
 			die6('dice'+i);
